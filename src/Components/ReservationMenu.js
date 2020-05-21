@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 
 class ReservationMenu extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      name: '',
       date: '',
-      time: '',
-      numberOfGuests: 0
+      id: null,
+      name: '',
+      number: 0,
+      time: ''
     }
   }
+
   updateName = (event) => {
     this.setState({
       name: event.target.value
@@ -24,7 +26,7 @@ class ReservationMenu extends Component {
 
   updateGuests = (event) => {
     this.setState({
-      numberOfGuests: event.target.value
+      number: event.target.value
     })
   }
 
@@ -36,6 +38,8 @@ class ReservationMenu extends Component {
 
   clickHandler = (event) => {
     event.preventDefault()
+    this.props.createReservation(this.state)
+    console.log(1);
   }
 
 

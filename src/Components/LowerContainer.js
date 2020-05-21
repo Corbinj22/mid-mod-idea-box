@@ -2,14 +2,14 @@ import React from 'react';
 import Card from './Card'
 import ReservationMenu from './ReservationMenu'
 
-const LowerContainer = ({upcomingReservations}) => {
+const LowerContainer = ({upcomingReservations, createReservation}) => {
  let reservations = upcomingReservations.map(reservation => {
    return <Card key={reservation.id} reservationDetails={reservation} />
  })
 
 return (
   <div className='reservationContainer'>
-    <ReservationMenu />
+    <ReservationMenu createReservation={createReservation}/>
     {reservations}
   </div>
 )

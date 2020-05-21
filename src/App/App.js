@@ -18,12 +18,23 @@ class App extends Component {
   })
 }
 
+  createReservation = (newResevation) => {
+    newResevation.id = this.state.upcomingReservations.length + 1
+    console.log(newResevation);
+    this.setState({
+      upcomingReservations: [...this.state.upcomingReservations, newResevation]
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-        <LowerContainer upcomingReservations={this.state.upcomingReservations}/>
+        <LowerContainer
+          upcomingReservations={this.state.upcomingReservations}
+          createReservation={this.createReservation}
+          />
         </div>
       </div>
     )
