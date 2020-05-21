@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LowerContainer from '../Components/LowerContainer'
+import LowerContainer from '../Components/LowerContainer/LowerContainer'
 import './App.css';
 
 import { getReservations } from '../apiCalls'

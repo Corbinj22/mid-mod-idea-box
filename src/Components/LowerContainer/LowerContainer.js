@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from './Card'
-import ReservationMenu from './ReservationMenu'
+import Card from '../Card/Card'
+import ReservationMenu from '../ReservationMenu/ReservationMenu'
 
 const LowerContainer = ({upcomingReservations, createReservation}) => {
  let reservations = upcomingReservations.map(reservation => {
