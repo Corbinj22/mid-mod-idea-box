@@ -8,7 +8,7 @@ class ReservationMenu extends Component {
       date: '',
       id: null,
       name: '',
-      number: 0,
+      number: '',
       time: ''
     }
   }
@@ -44,7 +44,7 @@ class ReservationMenu extends Component {
         date: '',
         id: null,
         name: '',
-        number: 0,
+        number: '',
         time: ''
     })
   }
@@ -52,10 +52,10 @@ class ReservationMenu extends Component {
   render() {
     return (
       <form className='reservationForm'>
-        <input className='userDate catchAll' type='text' placeholder='Date' onChange={this.updateDate}></input>
-        <input className='userName catchAll' type='text' placeholder='Name' onChange={this.updateName}></input>
-        <input className='userNumber catchAll' type='text' placeholder='Number of Guests' onChange={this.updateGuests}></input>
-        <input className='userTime catchAll' type='text' placeholder='Time' onChange={this.updateTime}></input>
+        <input className='userDate catchAll' type='text' placeholder='Date' onChange={this.updateDate} value={this.state.date}></input>
+        <input className='userName catchAll' type='text' placeholder='Name' onChange={this.updateName} value={this.state.name}></input>
+        <input className='userNumber catchAll' type='text' placeholder='Number of Guests' onChange={this.updateGuests} value={this.state.number}></input>
+        <input className='userTime catchAll' type='text' placeholder='Time' onChange={this.updateTime} value={this.state.time}></input>
         <button className="submitReservation catchAll" type='click' onClick={this.clickHandler}>Make Reservation</button>
       </form>
     );
