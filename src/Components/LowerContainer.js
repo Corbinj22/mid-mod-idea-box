@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card'
-import IdeaMenu from './IdeaBox'
+import ReservationMenu from './ReservationMenu'
 
 const LowerContainer = ({upcomingReservations}) => {
  let reservations = upcomingReservations.map(reservation => {
@@ -9,6 +9,7 @@ const LowerContainer = ({upcomingReservations}) => {
 
 return (
   <div className='reservationContainer'>
+    <ReservationMenu />
     {reservations}
   </div>
 )
