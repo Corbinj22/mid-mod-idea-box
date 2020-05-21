@@ -39,9 +39,7 @@ class ReservationMenu extends Component {
   clickHandler = (event) => {
     event.preventDefault()
     this.props.createReservation(this.state)
-    console.log(1);
   }
-
 
   render() {
     return (

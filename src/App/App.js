@@ -12,15 +12,14 @@ class App extends Component {
     }
   }
 
-  componentDidMount = async () => {
-  await this.setState({
-   upcomingReservations: await getReservations()
-  })
-}
+    componentDidMount = async () => {
+    await this.setState({
+     upcomingReservations: await getReservations()
+    })
+  }
 
   createReservation = (newResevation) => {
     newResevation.id = this.state.upcomingReservations.length + 1
-    console.log(newResevation);
     this.setState({
       upcomingReservations: [...this.state.upcomingReservations, newResevation]
     })
