@@ -20,7 +20,7 @@ describe(ReservationMenu, () => {
    expect(nameInput).toBeInTheDocument()
   });
 
-  it('should keep track of the user name', () => {
+  it('should keep track of the user inputs', () => {
    const { getByText, getByPlaceholderText} = render(<ReservationMenu createReservation={mockClickHandler}/>)
 
    const nameInput = getByPlaceholderText('Name')
